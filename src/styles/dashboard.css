@@ -1,0 +1,94 @@
+:root {
+    --main-background-color: #1d1b03;
+    --accent-color: #E37AFC;
+    --task-color: #5A5A59;
+}
+
+body {
+    background-color: var(--main-background-color);
+    color: var(--accent-color);
+    font-family: "Ubuntu Sans", sans-serif;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-family: "Doto", sans-serif;
+        font-size: 2.4rem;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+
+    div {
+        border-radius: 10px;
+    }
+
+    .card {
+        background-color: #363633;
+        margin: 15px;
+        padding: 15px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    .folders {
+
+        ul {
+            list-style: none;
+            padding: 0 0 0 25px;
+
+            a {
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .tasks {
+        .task {
+            display: flex;
+            align-items: center;
+            background-color: var(--task-color);
+            padding: 10px;
+            font-size: 1.4rem;
+
+            input[type="checkbox"] {
+                clip-path: circle();
+                width: 1.4rem; /* Set width */
+                height: 1.4rem;
+                accent-color: var(--accent-color);
+            }
+
+            * {
+                margin: 0.5rem;
+            }
+        }
+    }
+
+    .calendar {
+        display: none;
+    }
+}
