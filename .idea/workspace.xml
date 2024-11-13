@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64b9d004-9bc6-4513-834b-82490619cd4d" name="Changes" comment="removed fixed password" />
+    <list default="true" id="64b9d004-9bc6-4513-834b-82490619cd4d" name="Changes" comment="consistent button style" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731440157629</updated>
       <workItem from="1731440158646" duration="6676000" />
-      <workItem from="1731481800319" duration="12236000" />
+      <workItem from="1731481800319" duration="12848000" />
     </task>
     <task id="LOCAL-00001" summary="Project files">
       <option name="closed" value="true" />
@@ -271,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731494981776</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="consistent button style">
+      <option name="closed" value="true" />
+      <created>1731495061577</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1731495061577</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +320,7 @@
     <MESSAGE value="added link copy button" />
     <MESSAGE value="added favicon" />
     <MESSAGE value="removed fixed password" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed fixed password" />
+    <MESSAGE value="consistent button style" />
+    <option name="LAST_COMMIT_MESSAGE" value="consistent button style" />
   </component>
 </project>
