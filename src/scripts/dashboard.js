@@ -18,9 +18,13 @@ if (!isValidToken(token)) {
                 updateTask(token, task.id);
             });
 
-            const taskTitle = document.createElement("h3");
+            const taskTitle = document.createElement("input");
+            taskTitle.type = "text";
             taskTitle.className = "task_title";
-            taskTitle.textContent = task.title;
+            taskTitle.value = task.title;
+            taskTitle.addEventListener("change", (event) => {
+                updateTask(token, task.id);
+            });
 
             taskElement.appendChild(checkbox);
             taskElement.appendChild(taskTitle);
@@ -97,7 +101,7 @@ async function updateTask(token, id) {
 function getTaskState(id) {
     const taskElement = document.querySelector(`.task[taskid="${id}"]`);
     const checked = taskElement.querySelector("input[type='checkbox']").checked;
-    const title = taskElement.querySelector("h3.task_title").textContent;
+    const title = taskElement.querySelector(".task_title").value;
 
     return JSON.stringify({id, title, completed: checked});
 }
