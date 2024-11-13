@@ -3,6 +3,28 @@ const token = sessionStorage.getItem("token");
 
 if(!isValidToken(token)) {
     window.location.href = "login.html";
+} else {
+    getAllTasks(token).then((tasks) => {
+
+        tasks.forEach(task => {
+            const taskElement = document.createElement("div");
+            taskElement.className = "task";
+            taskElement.setAttribute("taskid", task.id);
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.checked = task.completed;
+
+            const taskTitle = document.createElement("h3");
+            taskTitle.className = "task_title";
+            taskTitle.textContent = task.title;
+
+            taskElement.appendChild(checkbox);
+            taskElement.appendChild(taskTitle);
+
+            document.querySelector(".tasks").appendChild(taskElement);
+        });
+    });
 }
 
 function logOut() {
@@ -35,4 +57,15 @@ async function isValidToken(token) {
         console.log("HTTP-Error:( ");
         return false;
     }
+}
+
+async function getAllTasks(token) {
+    const endpoint = "/auth/jwt/tasks";
+
+    const response = await fetch(url + endpoint, {
+        method: 'GET',
+        headers: { 'Authorization': `Bearer ${token}` }
+    })
+
+    return await response.json();
 }
