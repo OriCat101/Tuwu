@@ -99,7 +99,6 @@ async function newTask(token) {
     }
 }
 
-
 function addTask(id = 0, title = "", completed = false,) {
     const taskElement = document.createElement("div");
     taskElement.className = "task";
@@ -120,9 +119,33 @@ function addTask(id = 0, title = "", completed = false,) {
         updateTask(token, id);
     });
 
+    const trashCan = document.createElement("i");
+    trashCan.className = "fa-solid fa-trash";
+    trashCan.addEventListener("click", (event) => {
+        deleteTask(token, id);
+    });
+
     taskElement.appendChild(checkbox);
     taskElement.appendChild(taskTitle);
+    taskElement.appendChild(trashCan);
 
     document.querySelector(".tasks").insertBefore(taskElement, document.querySelector(".tasks").children[1])
+}
+
+function deleteTask(token, id) {
+    const endpoint = "/auth/jwt/task/" + id;
+
+    fetch(url + endpoint, {
+        method: 'DELETE',
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }).then((response) => {
+        if (response.ok) {
+            document.querySelector(`.task[taskid="${id}"]`).remove();
+        } else {
+            console.log("HTTP-Error:( ");
+        }
+    });
 }
 
