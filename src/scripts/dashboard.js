@@ -7,29 +7,9 @@ if (!isValidToken(token)) {
     getAllTasks(token).then((tasks) => {
 
         tasks.forEach(task => {
-            const taskElement = document.createElement("div");
-            taskElement.className = "task";
-            taskElement.setAttribute("taskid", task.id);
+            const taskElement = addTask(task.id, task.title, task.completed);
 
-            const checkbox = document.createElement("input");
-            checkbox.type = "checkbox";
-            checkbox.checked = task.completed;
-            checkbox.addEventListener("change", (event) => {
-                updateTask(token, task.id);
-            });
-
-            const taskTitle = document.createElement("input");
-            taskTitle.type = "text";
-            taskTitle.className = "task_title";
-            taskTitle.value = task.title;
-            taskTitle.addEventListener("change", (event) => {
-                updateTask(token, task.id);
-            });
-
-            taskElement.appendChild(checkbox);
-            taskElement.appendChild(taskTitle);
-
-            document.querySelector(".tasks").appendChild(taskElement);
+            document.querySelector(".tasks").insertBefore(taskElement, document.querySelector(".tasks").children[1]);
         });
     });
 }
@@ -105,3 +85,33 @@ function getTaskState(id) {
 
     return JSON.stringify({id, title, completed: checked});
 }
+
+function addTask(
+    id = 0,
+    title = "",
+    completed = false,
+) {
+    const taskElement = document.createElement("div");
+    taskElement.className = "task";
+    taskElement.setAttribute("taskid", id);
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked =completed;
+    checkbox.addEventListener("change", (event) => {
+        updateTask(token, id);
+    });
+
+    const taskTitle = document.createElement("input");
+    taskTitle.type = "text";
+    taskTitle.className = "task_title";
+    taskTitle.value = title;
+    taskTitle.addEventListener("change", (event) => {
+        updateTask(token, id);
+    });
+
+    taskElement.appendChild(checkbox);
+    taskElement.appendChild(taskTitle);
+    return taskElement;
+}
+
