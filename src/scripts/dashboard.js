@@ -1,7 +1,7 @@
 const url = "http://172.17.0.2:3000";
 const token = sessionStorage.getItem("token");
 
-if(!isValidToken(token)) {
+if (!isValidToken(token)) {
     window.location.href = "login.html";
 } else {
     getAllTasks(token).then((tasks) => {
@@ -14,6 +14,9 @@ if(!isValidToken(token)) {
             const checkbox = document.createElement("input");
             checkbox.type = "checkbox";
             checkbox.checked = task.completed;
+            checkbox.addEventListener("change", (event) => {
+                updateTask(token, task.id);
+            });
 
             const taskTitle = document.createElement("h3");
             taskTitle.className = "task_title";
@@ -41,7 +44,7 @@ async function isValidToken(token) {
 
     const response = await fetch(url + endpoint, {
         method: "GET",
-        headers: { 'Authorization': `Bearer ${token}` }
+        headers: {'Authorization': `Bearer ${token}`}
     });
 
     if (response.ok) {
@@ -64,8 +67,37 @@ async function getAllTasks(token) {
 
     const response = await fetch(url + endpoint, {
         method: 'GET',
-        headers: { 'Authorization': `Bearer ${token}` }
+        headers: {'Authorization': `Bearer ${token}`}
     })
 
     return await response.json();
+}
+
+async function updateTask(token, id) {
+    const endpoint = "/auth/jwt/tasks";
+
+    let taskState = getTaskState(id);
+
+    const response = await fetch(url + endpoint, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: taskState
+    })
+
+    if (response.ok) {
+        console.log("Task updated");
+    } else {
+        console.log("HTTP-Error:( ");
+    }
+}
+
+function getTaskState(id) {
+    const taskElement = document.querySelector(`.task[taskid="${id}"]`);
+    const checked = taskElement.querySelector("input[type='checkbox']").checked;
+    const title = taskElement.querySelector("h3.task_title").textContent;
+
+    return JSON.stringify({id, title, completed: checked});
 }
