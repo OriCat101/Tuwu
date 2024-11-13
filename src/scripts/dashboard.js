@@ -103,8 +103,10 @@ function addTask(id = 0, title = "", completed = false,) {
     const taskElement = document.createElement("div");
     taskElement.className = "task";
     taskElement.setAttribute("taskid", id);
+    taskElement.setAttribute("id", id);
 
-    const container = document.createElement("div");
+    const containerL = document.createElement("div");
+    const containerR = document.createElement("div");
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
@@ -121,16 +123,24 @@ function addTask(id = 0, title = "", completed = false,) {
         updateTask(token, id);
     });
 
+    const copyLink = document.createElement("i");
+    copyLink.className = "fa-solid fa-link";
+    copyLink.addEventListener("click", (event) => {
+        navigator.clipboard.writeText(window.location.href.split('#')[0] + "#" + id);
+    });
+
     const trashCan = document.createElement("i");
     trashCan.className = "fa-solid fa-trash";
     trashCan.addEventListener("click", (event) => {
         deleteTask(token, id);
     });
 
-    container.appendChild(checkbox);
-    container.appendChild(taskTitle);
-    taskElement.appendChild(container);
-    taskElement.appendChild(trashCan);
+    containerL.appendChild(checkbox);
+    containerL.appendChild(taskTitle);
+    taskElement.appendChild(containerL);
+    containerR.appendChild(copyLink);
+    containerR.appendChild(trashCan);
+    taskElement.appendChild(containerR);
 
     document.querySelector(".tasks").insertBefore(taskElement, document.querySelector(".tasks").children[1])
 }
