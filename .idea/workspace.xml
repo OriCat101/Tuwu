@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64b9d004-9bc6-4513-834b-82490619cd4d" name="Changes" comment="delete tasks">
+    <list default="true" id="64b9d004-9bc6-4513-834b-82490619cd4d" name="Changes" comment="added link copy button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.css" afterDir="false" />
     </list>
@@ -89,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731440157629</updated>
       <workItem from="1731440158646" duration="6676000" />
-      <workItem from="1731481800319" duration="10479000" />
+      <workItem from="1731481800319" duration="11911000" />
     </task>
     <task id="LOCAL-00001" summary="Project files">
       <option name="closed" value="true" />
@@ -227,7 +226,39 @@
       <option name="project" value="LOCAL" />
       <updated>1731492923154</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="new task button styled">
+      <option name="closed" value="true" />
+      <created>1731493256294</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731493256294</updated>
+    </task>
+    <task id="LOCAL-00019" summary="loggout button is also pwetty now">
+      <option name="closed" value="true" />
+      <created>1731493496154</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731493496154</updated>
+    </task>
+    <task id="LOCAL-00020" summary="delete button is also pwetty now">
+      <option name="closed" value="true" />
+      <created>1731493850582</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1731493850582</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added link copy button">
+      <option name="closed" value="true" />
+      <created>1731494308599</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1731494308599</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +282,10 @@
     <MESSAGE value="moved addTask into function" />
     <MESSAGE value="new tasks can be created now" />
     <MESSAGE value="delete tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete tasks" />
+    <MESSAGE value="new task button styled" />
+    <MESSAGE value="loggout button is also pwetty now" />
+    <MESSAGE value="delete button is also pwetty now" />
+    <MESSAGE value="added link copy button" />
+    <option name="LAST_COMMIT_MESSAGE" value="added link copy button" />
   </component>
 </project>

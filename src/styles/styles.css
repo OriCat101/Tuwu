@@ -112,6 +112,11 @@ main {
         #new_task {
             font-size: medium;
         }
+
+        .fa-solid {
+            cursor: pointer;
+            font-size: 1.4rem;
+        }
     }
 
     .calendar {
