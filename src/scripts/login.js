@@ -24,12 +24,13 @@ async function getLoginToken(event) {
         const data = await response.json();
         token = data.token;
         sessionStorage.setItem("token", token);
+        sessionStorage.setItem("email", email);
 
         setTimeout(() => {
             window.location.href = "dashboard.html";
         }, 1000);
     } else {
-        console.log("HTTP-Error: " + response.status);
+        console.log("HTTP-Error:(");
     }
 }
 
