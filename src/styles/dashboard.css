@@ -9,6 +9,10 @@ body {
     color: var(--accent-color);
     font-family: "Ubuntu Sans", sans-serif;
     padding: 20px;
+
+    a {
+        color: white;
+    }
 }
 
 header {
@@ -51,6 +55,7 @@ main {
     }
 
     .folders {
+        visibility: hidden;
 
         ul {
             list-style: none;
