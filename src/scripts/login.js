@@ -23,7 +23,13 @@ async function getLoginToken(event) {
     if (response.ok) {
         const data = await response.json();
         token = data.token;
+        sessionStorage.setItem("token", token);
+
+        setTimeout(() => {
+            window.location.href = "dashboard.html";
+        }, 1000);
     } else {
         console.log("HTTP-Error: " + response.status);
     }
 }
+
