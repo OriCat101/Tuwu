@@ -104,6 +104,8 @@ function addTask(id = 0, title = "", completed = false,) {
     taskElement.className = "task";
     taskElement.setAttribute("taskid", id);
 
+    const container = document.createElement("div");
+
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = completed;
@@ -125,8 +127,9 @@ function addTask(id = 0, title = "", completed = false,) {
         deleteTask(token, id);
     });
 
-    taskElement.appendChild(checkbox);
-    taskElement.appendChild(taskTitle);
+    container.appendChild(checkbox);
+    container.appendChild(taskTitle);
+    taskElement.appendChild(container);
     taskElement.appendChild(trashCan);
 
     document.querySelector(".tasks").insertBefore(taskElement, document.querySelector(".tasks").children[1])

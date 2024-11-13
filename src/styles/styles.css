@@ -77,7 +77,13 @@ main {
             display: flex;
             align-items: center;
             background-color: var(--task-color);
-            padding: 10px;;
+            padding: 10px;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                align-items: center;
+            }
 
             &:not(:last-child) {
                 margin-bottom: 10px;
