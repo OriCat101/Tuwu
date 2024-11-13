@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64b9d004-9bc6-4513-834b-82490619cd4d" name="Changes" comment="css">
+    <list default="true" id="64b9d004-9bc6-4513-834b-82490619cd4d" name="Changes" comment="delete tasks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,6 +38,9 @@
     &quot;accountId&quot;: &quot;98bf8c02-007a-43bf-823e-cb112d750ee5&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -41,6 +54,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.dashboard.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
@@ -75,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731440157629</updated>
       <workItem from="1731440158646" duration="6676000" />
-      <workItem from="1731481800319" duration="727000" />
+      <workItem from="1731481800319" duration="10479000" />
     </task>
     <task id="LOCAL-00001" summary="Project files">
       <option name="closed" value="true" />
@@ -101,7 +115,119 @@
       <option name="project" value="LOCAL" />
       <updated>1731445083117</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="hide folders">
+      <option name="closed" value="true" />
+      <created>1731482816862</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731482816862</updated>
+    </task>
+    <task id="LOCAL-00005" summary="built login modal, non functional">
+      <option name="closed" value="true" />
+      <created>1731483578951</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731483578951</updated>
+    </task>
+    <task id="LOCAL-00006" summary="renamed from dashboard.css to styles.css">
+      <option name="closed" value="true" />
+      <created>1731483656664</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731483656664</updated>
+    </task>
+    <task id="LOCAL-00007" summary="working login">
+      <option name="closed" value="true" />
+      <created>1731485641377</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731485641377</updated>
+    </task>
+    <task id="LOCAL-00008" summary="store token in session">
+      <option name="closed" value="true" />
+      <created>1731485845615</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731485845615</updated>
+    </task>
+    <task id="LOCAL-00009" summary="check if token in session">
+      <option name="closed" value="true" />
+      <created>1731486264138</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731486264138</updated>
+    </task>
+    <task id="LOCAL-00010" summary="working logout">
+      <option name="closed" value="true" />
+      <created>1731486476228</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731486476228</updated>
+    </task>
+    <task id="LOCAL-00011" summary="check if login token is valid">
+      <option name="closed" value="true" />
+      <created>1731487336767</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731487336767</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fetch all tasks">
+      <option name="closed" value="true" />
+      <created>1731490476774</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731490476774</updated>
+    </task>
+    <task id="LOCAL-00013" summary="tasks can now be checked and unchecked">
+      <option name="closed" value="true" />
+      <created>1731491173116</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731491173116</updated>
+    </task>
+    <task id="LOCAL-00014" summary="task title can now be updated">
+      <option name="closed" value="true" />
+      <created>1731491452088</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731491452088</updated>
+    </task>
+    <task id="LOCAL-00015" summary="moved addTask into function">
+      <option name="closed" value="true" />
+      <created>1731491804309</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731491804309</updated>
+    </task>
+    <task id="LOCAL-00016" summary="new tasks can be created now">
+      <option name="closed" value="true" />
+      <created>1731492603610</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731492603610</updated>
+    </task>
+    <task id="LOCAL-00017" summary="delete tasks">
+      <option name="closed" value="true" />
+      <created>1731492923154</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731492923154</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +237,20 @@
     <MESSAGE value="Project files" />
     <MESSAGE value="made dashboard mockup" />
     <MESSAGE value="css" />
-    <option name="LAST_COMMIT_MESSAGE" value="css" />
+    <MESSAGE value="hide folders" />
+    <MESSAGE value="built login modal, non functional" />
+    <MESSAGE value="renamed from dashboard.css to styles.css" />
+    <MESSAGE value="working login" />
+    <MESSAGE value="store token in session" />
+    <MESSAGE value="check if token in session" />
+    <MESSAGE value="working logout" />
+    <MESSAGE value="check if login token is valid" />
+    <MESSAGE value="fetch all tasks" />
+    <MESSAGE value="tasks can now be checked and unchecked" />
+    <MESSAGE value="task title can now be updated" />
+    <MESSAGE value="moved addTask into function" />
+    <MESSAGE value="new tasks can be created now" />
+    <MESSAGE value="delete tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete tasks" />
   </component>
 </project>
