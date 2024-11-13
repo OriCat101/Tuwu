@@ -5,11 +5,8 @@ if (!isValidToken(token)) {
     window.location.href = "login.html";
 } else {
     getAllTasks(token).then((tasks) => {
-
         tasks.forEach(task => {
-            const taskElement = addTask(task.id, task.title, task.completed);
-
-            document.querySelector(".tasks").insertBefore(taskElement, document.querySelector(".tasks").children[1]);
+            addTask(task.id, task.title, task.completed);
         });
     });
 }
@@ -27,8 +24,7 @@ async function isValidToken(token) {
     const endpoint = "/auth/jwt/verify";
 
     const response = await fetch(url + endpoint, {
-        method: "GET",
-        headers: {'Authorization': `Bearer ${token}`}
+        method: "GET", headers: {'Authorization': `Bearer ${token}`}
     });
 
     if (response.ok) {
@@ -50,8 +46,7 @@ async function getAllTasks(token) {
     const endpoint = "/auth/jwt/tasks";
 
     const response = await fetch(url + endpoint, {
-        method: 'GET',
-        headers: {'Authorization': `Bearer ${token}`}
+        method: 'GET', headers: {'Authorization': `Bearer ${token}`}
     })
 
     return await response.json();
@@ -63,12 +58,9 @@ async function updateTask(token, id) {
     let taskState = getTaskState(id);
 
     const response = await fetch(url + endpoint, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-        },
-        body: taskState
+        method: 'PUT', headers: {
+            'Content-Type': 'application/json', 'Authorization': `Bearer ${token}`
+        }, body: taskState
     })
 
     if (response.ok) {
@@ -86,18 +78,36 @@ function getTaskState(id) {
     return JSON.stringify({id, title, completed: checked});
 }
 
-function addTask(
-    id = 0,
-    title = "",
-    completed = false,
-) {
+async function newTask(token) {
+    const endpoint = "/auth/jwt/tasks";
+    const title = "New task";
+    const completed = false;
+
+    const response = await fetch(url + endpoint, {
+        method: 'POST', headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }, body: JSON.stringify({title, completed})
+    })
+
+    if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        addTask(data.id, data.title, data.completed);
+    } else {
+        console.log("HTTP-Error:( ");
+    }
+}
+
+
+function addTask(id = 0, title = "", completed = false,) {
     const taskElement = document.createElement("div");
     taskElement.className = "task";
     taskElement.setAttribute("taskid", id);
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.checked =completed;
+    checkbox.checked = completed;
     checkbox.addEventListener("change", (event) => {
         updateTask(token, id);
     });
@@ -112,6 +122,7 @@ function addTask(
 
     taskElement.appendChild(checkbox);
     taskElement.appendChild(taskTitle);
-    return taskElement;
+
+    document.querySelector(".tasks").insertBefore(taskElement, document.querySelector(".tasks").children[1])
 }
 
