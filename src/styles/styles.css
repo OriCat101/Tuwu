@@ -150,7 +150,6 @@ main {
             border-radius: 5px;
             border: none;
             background-color: var(--accent-color);
-            color: var(--main-background-color);
             cursor: pointer;
         }
     }
@@ -160,6 +159,6 @@ button {
     border-radius: 10px;
     padding: 10px 20px;
     font-family: 'Ubuntu Sans';
-    color: #fff;
+    color: var(--main-background-color);
     background-color: var(--accent-color);
 }

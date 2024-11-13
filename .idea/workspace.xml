@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64b9d004-9bc6-4513-834b-82490619cd4d" name="Changes" comment="added link copy button">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="64b9d004-9bc6-4513-834b-82490619cd4d" name="Changes" comment="removed fixed password" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/oricat/code/Tuwu/src/fonts",
+    "last_opened_file_path": "/home/oricat/code/Tuwu/src/assets/favicon",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +65,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/favicon" />
       <recent name="$PROJECT_DIR$/src/fonts" />
     </key>
   </component>
@@ -88,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731440157629</updated>
       <workItem from="1731440158646" duration="6676000" />
-      <workItem from="1731481800319" duration="11911000" />
+      <workItem from="1731481800319" duration="12236000" />
     </task>
     <task id="LOCAL-00001" summary="Project files">
       <option name="closed" value="true" />
@@ -258,11 +255,38 @@
       <option name="project" value="LOCAL" />
       <updated>1731494308599</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added favicon">
+      <option name="closed" value="true" />
+      <created>1731494883361</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1731494883361</updated>
+    </task>
+    <task id="LOCAL-00023" summary="removed fixed password">
+      <option name="closed" value="true" />
+      <created>1731494981776</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1731494981776</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project files" />
@@ -286,6 +310,8 @@
     <MESSAGE value="loggout button is also pwetty now" />
     <MESSAGE value="delete button is also pwetty now" />
     <MESSAGE value="added link copy button" />
-    <option name="LAST_COMMIT_MESSAGE" value="added link copy button" />
+    <MESSAGE value="added favicon" />
+    <MESSAGE value="removed fixed password" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed fixed password" />
   </component>
 </project>
