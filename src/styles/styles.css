@@ -103,6 +103,15 @@ main {
                 margin: 0.5rem;
             }
         }
+
+        #new_task {
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-family: 'Ubuntu Sans';
+            color: #fff;
+            background-color: var(--accent-color);
+            font-size: medium;
+        }
     }
 
     .calendar {
