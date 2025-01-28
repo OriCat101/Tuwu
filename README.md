@@ -1,3 +1,5 @@
+# THE BACKEND FOR THIS IS NOT PUBLICLY AVALIDABLE DUE TO THIS BEING FOR A GRADED SCHOLL EXAM
+
 # Tuwu
 
 Tuwu is a web-based dashboard application that allows users to manage tasks. The application includes a login page for user authentication.
